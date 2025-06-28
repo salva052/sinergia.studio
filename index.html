@@ -3,133 +3,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sinergia Studio - Transformamos ideas en estrategias digitales auténticas y efectivas.">
-  <title>Sinergia Studio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>Futuristic Content Creation</title>
+  <meta name="description" content="Sinergia Studio - Creación de contenido digital y soluciones innovadoras">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-main: #15b95a;
+      --green-light: #a6f7c6;
+      --green-dark: #096b34;
+      --green-accent: #34eb77;
+      --text-main: #0f2e1a;
+    }
+    body {
+      background: #fff;
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-main);
+      margin: 0;
+      padding: 0;
+    }
+    .hero-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 32px;
+      margin: 40px auto;
+      max-width: 1100px;
+      background: rgba(166,247,198,0.06);
+      box-shadow: 0 10px 40px 0 rgba(20,100,44,0.07);
+      padding: 60px 36px 80px 36px;
+    }
+    .hero-bg-svg {
+      position: absolute;
+      z-index: 0;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      min-height: 420px;
+    }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .circle-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--green-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .brand-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--green-main);
+      letter-spacing: 1px;
+    }
+    .hero-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.1rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 14px;
+      line-height: 1.1;
+    }
+    .hero-desc {
+      font-size: 1.17rem;
+      max-width: 430px;
+      color: #255b3d;
+      margin-bottom: 30px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 18px;
+      margin-top: 12px;
+    }
+    .btn-main {
+      background: var(--green-main);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 13px 32px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.06rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 14px 0 rgba(52,235,119,0.13);
+      transition: background 0.22s, color 0.22s;
+    }
+    .btn-main:hover {
+      background: var(--green-dark);
+      color: #fff;
+    }
+    .btn-alt {
+      background: transparent;
+      color: var(--green-main);
+      border: 2px solid var(--green-main);
+      border-radius: 50px;
+      padding: 13px 32px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.06rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.22s, color 0.22s, border-color 0.22s;
+    }
+    .btn-alt:hover {
+      background: var(--green-main);
+      color: #fff;
+      border-color: var(--green-main);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-container {
+        padding: 36px 10px 48px 10px;
+      }
+      .hero-title {
+        font-size: 2.1rem;
+      }
+      .hero-content {
+        min-height: 320px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Encabezado -->
-  <header class="header-container">
-    <div class="branding">
-      <h1 class="logo">Sinergia Studio</h1>
-    </div>
-    <nav class="nav-bar">
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#porque-elegirnos">¿Por qué elegirnos?</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#testimonios">Testimonios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="hero-container">
+    <!-- Fondo SVG con motivos de creación de contenido en verde -->
+    <svg class="hero-bg-svg" viewBox="0 0 1100 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Abstract green blobs and shapes -->
+      <ellipse cx="170" cy="110" rx="120" ry="70" fill="#eafef1" fill-opacity="0.60"/>
+      <ellipse cx="950" cy="380" rx="110" ry="60" fill="#eafef1" fill-opacity="0.42"/>
+      <ellipse cx="300" cy="400" rx="80" ry="50" fill="#b2ffd8" fill-opacity="0.34"/>
+      <!-- Icon: Video Camera -->
+      <g>
+        <circle cx="210" cy="320" r="34" fill="#a6f7c6" fill-opacity="0.82"/>
+        <g>
+          <rect x="195" y="306" width="28" height="18" rx="5" fill="#15b95a"/>
+          <polygon points="223,315 236,323 236,309" fill="#15b95a"/>
+        </g>
+      </g>
+      <!-- Icon: Photo Camera -->
+      <g>
+        <circle cx="980" cy="120" r="28" fill="#b2ffd8" fill-opacity="0.62"/>
+        <g>
+          <rect x="965" y="110" width="24" height="14" rx="3" fill="#34eb77"/>
+          <circle cx="977" cy="117" r="4" fill="#15b95a"/>
+        </g>
+      </g>
+      <!-- Icon: Edit pencil -->
+      <g>
+        <circle cx="800" cy="90" r="22" fill="#a6f7c6" fill-opacity="0.68"/>
+        <rect x="792" y="84" width="16" height="5" rx="2" fill="#096b34" transform="rotate(45 800 90)"/>
+      </g>
+      <!-- Icon: Social (chat bubble) -->
+      <g>
+        <circle cx="80" cy="420" r="19" fill="#34eb77" fill-opacity="0.43"/>
+        <rect x="70" y="410" width="16" height="10" rx="3" fill="#15b95a"/>
+        <polygon points="82,420 88,425 85,420" fill="#15b95a"/>
+      </g>
+      <!-- Decorative lines -->
+      <line x1="300" y1="90" x2="400" y2="90" stroke="#15b95a" stroke-width="3" stroke-dasharray="10,6"/>
+      <line x1="800" y1="420" x2="900" y2="410" stroke="#34eb77" stroke-width="3" stroke-dasharray="12,5"/>
+      <ellipse cx="600" cy="240" rx="180" ry="110" fill="#a6f7c6" fill-opacity="0.09"/>
+    </svg>
 
-  <!-- Hero Section -->
-  <section id="inicio" class="hero-section">
+    <!-- Contenido principal -->
     <div class="hero-content">
-      <h1 class="hero-title">Sinergia Studio</h1>
-      <p class="hero-description">
-        Transformamos ideas en estrategias digitales auténticas y efectivas.
-      </p>
+      <div class="brand-row">
+        <div class="circle-logo">
+          <i class="fas fa-bolt" style="color: #fff; font-size: 1.2rem;"></i>
+        </div>
+        <span class="brand-name">Sinergia Studio</span>
+      </div>
+      <h1 class="hero-title">Creación de Contenido Futurista</h1>
+      <div class="hero-desc">
+        Transformamos ideas en videos, fotos y estrategias <br>
+        para marcas que quieren destacar y conectar con su audiencia en digital.
+      </div>
       <div class="hero-buttons">
-        <a href="#contacto" class="btn">Contáctanos</a>
+        <a href="#servicios" class="btn-main">Ver Servicios</a>
+        <a href="#contacto" class="btn-alt">Contáctanos</a>
       </div>
     </div>
-    <div class="hero-designs">
-      <i class="fas fa-paint-brush"></i>
-      <i class="fas fa-video"></i>
-      <i class="fas fa-code"></i>
-      <i class="fas fa-chart-line"></i>
-    </div>
-  </section>
-
-  <!-- ¿Por qué elegirnos? -->
-  <section id="porque-elegirnos" class="section">
-    <h2 class="section-title">¿Por qué elegirnos?</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <i class="fas fa-user-check"></i>
-        <h3>Soluciones Personalizadas</h3>
-        <p>Diseñamos soluciones a medida para tus necesidades reales.</p>
-      </div>
-      <div class="feature-card">
-        <i class="fas fa-rocket"></i>
-        <h3>Resultados Tangibles</h3>
-        <p>Generamos contenido y estrategias que convierten.</p>
-      </div>
-      <div class="feature-card">
-        <i class="fas fa-heart"></i>
-        <h3>Conexión Auténtica</h3>
-        <p>Humanizamos marcas para que conecten emocionalmente.</p>
-      </div>
-      <div class="feature-card">
-        <i class="fas fa-clock"></i>
-        <h3>Ahorramos Tiempo</h3>
-        <p>Automatizamos procesos para mejorar tu productividad.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Servicios -->
-  <section id="servicios" class="section">
-    <h2 class="section-title">Nuestros Servicios</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Creación de Contenido</h3>
-        <p>Producción de videos, fotos y diseños que convierten seguidores en clientes.</p>
-      </div>
-      <div class="service-card">
-        <h3>Diseño y Branding</h3>
-        <p>Identidades visuales sólidas y profesionales para destacar en el mercado.</p>
-      </div>
-      <div class="service-card">
-        <h3>Marketing Digital</h3>
-        <p>Planificación de estrategias publicitarias y campañas efectivas.</p>
-      </div>
-      <div class="service-card">
-        <h3>Desarrollo Web</h3>
-        <p>Diseño y desarrollo de plataformas digitales modernas y funcionales.</p>
-      </div>
-      <div class="service-card">
-        <h3>Gestión de Redes Sociales</h3>
-        <p>Publicación, interacción y análisis de métricas para tu marca.</p>
-      </div>
-      <div class="service-card">
-        <h3>Consultoría y Capacitación</h3>
-        <p>Empoderamos a tu equipo para gestionar tu presencia digital.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonios -->
-  <section id="testimonios" class="section">
-    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
-    <div class="testimonial">
-      <blockquote>
-        "Gracias a Sinergia Studio, nuestra marca ahora conecta con más clientes. Su enfoque fresco y profesional marcó la diferencia."
-      </blockquote>
-      <p class="author">- María López, CEO de Creative Solutions</p>
-    </div>
-    <div class="testimonial">
-      <blockquote>
-        "El equipo de Sinergia Studio automatizó nuestros procesos digitales, ahorrándonos tiempo y aumentándonos ventas."
-      </blockquote>
-      <p class="author">- Juan Pérez, Fundador de TechPro</p>
-    </div>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto" class="section">
-    <h2 class="section-title">¿Listo para el futuro?</h2>
-    <p class="cta-text">Contáctanos y juntos llevaremos tu negocio al siguiente nivel.</p>
-    <a href="mailto:sinergia.studio@gmail.com" class="btn">Escríbenos Ahora</a>
-  </section>
-
-  <!-- Pie de Página -->
-  <footer class="footer">
-    <p>&copy; 2025 Sinergia Studio. Innovación para un mundo mejor.</p>
-  </footer>
+  </div>
 </body>
 </html>
