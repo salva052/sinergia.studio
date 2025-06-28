@@ -3,78 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sinergia Studio - Agencia creativa especializada en diseño, marketing y desarrollo web.">
+  <meta name="description" content="Sinergia Studio - Transformamos ideas en estrategias digitales que conectan y venden.">
   <title>Sinergia Studio</title>
-  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Encabezado -->
-  <header id="inicio">
-    <div class="header-container">
-      <img src="logo.png" alt="Logo de Sinergia Studio" class="logo">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#portafolio">Portafolio</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="hero">
-      <h1>Sinergia Studio</h1>
-      <p>Transformamos ideas en experiencias visuales impactantes.</p>
-      <a href="#contacto" class="btn">Contáctanos</a>
+  <header id="inicio" class="futuristic-header">
+    <div class="container">
+      <h1 class="main-title">Sinergia Studio</h1>
+      <p class="tagline">Transformamos ideas en estrategias digitales que venden y conectan.</p>
+      <a href="#contacto" class="btn-primary">¡Trabajemos Juntos!</a>
     </div>
   </header>
 
-  <!-- Sección de Servicios -->
-  <section id="servicios" class="section">
+  <!-- Sección: ¿Por qué elegirnos? -->
+  <section id="porque-elegirnos" class="section futuristic-section">
+    <h2 class="section-title">¿Por qué Sinergia Studio?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fas fa-user-check"></i>
+        <h3>Soluciones Personalizadas</h3>
+        <p>Nuestro enfoque se adapta a las necesidades reales de tu negocio.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-rocket"></i>
+        <h3>Resultados Tangibles</h3>
+        <p>Creamos estrategias que generan ventas, no solo vistas.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-heart"></i>
+        <h3>Conexión Auténtica</h3>
+        <p>Humanizamos marcas para que conecten emocionalmente.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Servicios -->
+  <section id="servicios" class="section futuristic-section">
     <h2 class="section-title">Nuestros Servicios</h2>
-    <div class="services">
-      <div class="service-card" data-animate="slide-in-left">
-        <i class="fas fa-paint-brush"></i>
-        <h3>Diseño Gráfico</h3>
-        <p>Creación de identidades visuales y materiales corporativos.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Creación de Contenido</h3>
+        <p>Producción de videos, fotos y diseños que convierten seguidores en clientes.</p>
       </div>
-      <div class="service-card" data-animate="fade-in">
-        <i class="fas fa-bullhorn"></i>
+      <div class="service-card">
+        <h3>Diseño & Branding</h3>
+        <p>Identidades visuales sólidas y profesionales para destacar en el mercado.</p>
+      </div>
+      <div class="service-card">
         <h3>Marketing Digital</h3>
-        <p>Estrategias para redes sociales, SEO y campañas publicitarias.</p>
+        <p>Estrategias publicitarias y campañas que generan resultados.</p>
       </div>
-      <div class="service-card" data-animate="slide-in-right">
-        <i class="fas fa-code"></i>
+      <div class="service-card">
         <h3>Desarrollo Web</h3>
-        <p>Diseño y desarrollo de sitios web modernos y funcionales.</p>
+        <p>Páginas modernas y funcionales que son tu carta de presentación digital.</p>
       </div>
     </div>
+    <a href="#contacto" class="btn-secondary">Ver Más Servicios</a>
   </section>
 
-  <!-- Sección de Portafolio -->
-  <section id="portafolio" class="section">
-    <h2 class="section-title">Portafolio</h2>
-    <p>Algunos de nuestros proyectos más recientes:</p>
-    <div class="portfolio">
-      <div class="portfolio-item" data-animate="zoom-in">Proyecto 1</div>
-      <div class="portfolio-item" data-animate="zoom-in">Proyecto 2</div>
-      <div class="portfolio-item" data-animate="zoom-in">Proyecto 3</div>
+  <!-- Sección: Testimonios -->
+  <section id="testimonios" class="section futuristic-section">
+    <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
+    <div class="testimonial">
+      <blockquote>
+        "Gracias a Sinergia Studio, nuestra marca ahora conecta con más clientes. Su enfoque fresco y profesional marcó la diferencia."
+      </blockquote>
+      <p class="author">- María López, CEO de Creative Solutions</p>
+    </div>
+    <div class="testimonial">
+      <blockquote>
+        "El equipo de Sinergia Studio automatizó nuestros procesos digitales, ahorrándonos tiempo y aumentándonos ventas."
+      </blockquote>
+      <p class="author">- Juan Pérez, Fundador de TechPro</p>
     </div>
   </section>
 
-  <!-- Sección de Contacto -->
-  <section id="contacto" class="section">
-    <h2 class="section-title">Contacto</h2>
-    <p>¿Listo para transformar tus ideas? <br> Escríbenos:</p>
-    <a href="mailto:contacto@sinergiastudio.com" class="btn">contacto@sinergiastudio.com</a>
+  <!-- Sección: Contacto -->
+  <section id="contacto" class="section futuristic-section">
+    <h2 class="section-title">¿Listo para el Futuro?</h2>
+    <p class="cta-text">Contáctanos y juntos llevaremos tu negocio al siguiente nivel.</p>
+    <a href="mailto:sinergia.studio@gmail.com" class="btn-primary">Escríbenos Ahora</a>
   </section>
 
-  <!-- Pie de página -->
+  <!-- Pie de Página -->
   <footer>
-    <p>&copy; 2025 Sinergia Studio. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Sinergia Studio. Innovación para un mundo mejor.</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>

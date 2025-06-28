@@ -1,10 +1,10 @@
+// Animaciones al hacer scroll
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll("[data-animate]");
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.style.animationDelay = entry.target.dataset.delay || "0s";
         entry.target.classList.add("animated");
       }
     });
