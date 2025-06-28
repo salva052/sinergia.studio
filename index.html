@@ -3,197 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Futuristic Content Creation</title>
-  <meta name="description" content="Sinergia Studio - Creación de contenido digital y soluciones innovadoras">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <title>Sinergia Studio - Estrategias Digitales</title>
+  <meta name="description" content="Sinergia Studio - Transformamos ideas en estrategias digitales que conectan y venden.">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --green-main: #15b95a;
-      --green-light: #a6f7c6;
-      --green-dark: #096b34;
-      --green-accent: #34eb77;
-      --text-main: #0f2e1a;
+      --green1: #34eb77;
+      --green2: #096b34;
+      --green3: #a6f7c6;
+      --green4: #1bb863;
+      --white: #fff;
+      --panel-bg: rgba(26, 61, 34, 0.32);
+      --panel-border: rgba(166,247,198, 0.12);
+      --text-main: #d6ffe6;
+      --text-strong: #fff;
     }
     body {
-      background: #fff;
-      min-height: 100vh;
+      margin: 0; min-height: 100vh;
+      background: radial-gradient(ellipse at 70% 10%, var(--green1) 0%, var(--green2) 100%);
       font-family: 'Poppins', sans-serif;
-      color: var(--text-main);
-      margin: 0;
-      padding: 0;
+      color: var(--white);
+      overflow-x: hidden;
     }
-    .hero-container {
+    .main-hero-panel {
+      max-width: 980px;
+      margin: 54px auto 0 auto;
+      background: var(--panel-bg);
+      border-radius: 30px;
+      box-shadow: 0 8px 48px 0 rgba(14,60,34,0.19);
+      border: 1.5px solid var(--panel-border);
       position: relative;
       overflow: hidden;
-      border-radius: 32px;
-      margin: 40px auto;
-      max-width: 1100px;
-      background: rgba(166,247,198,0.06);
-      box-shadow: 0 10px 40px 0 rgba(20,100,44,0.07);
-      padding: 60px 36px 80px 36px;
+      padding: 38px 42px 54px 42px;
+      z-index: 1;
     }
-    .hero-bg-svg {
+    /* Abstract shapes (SVG/Canvas-style) */
+    .abstract-bg {
       position: absolute;
-      z-index: 0;
-      top: 0; left: 0; width: 100%; height: 100%;
+      inset: 0;
       pointer-events: none;
+      z-index: 0;
     }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      min-height: 420px;
+    .main-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 28px;
     }
-    .brand-row {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 32px;
+    .brand {
+      display: flex; align-items: center; gap: 12px;
     }
-    .circle-logo {
-      width: 32px;
-      height: 32px;
+    .brand-circle {
+      width: 28px; height: 28px;
       border-radius: 50%;
-      background: var(--green-main);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: var(--green1);
+      display: flex; align-items: center; justify-content: center;
     }
     .brand-name {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      color: var(--green-main);
-      letter-spacing: 1px;
+      color: var(--text-main);
+      letter-spacing: 1.2px;
+      text-shadow: 0 2px 8px rgba(20,40,20,0.12);
+    }
+    .main-menu {
+      display: flex; gap: 32px;
+    }
+    .main-menu a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      font-size: 1.06rem;
+      transition: color 0.18s;
+      position: relative;
+    }
+    .main-menu a.active,
+    .main-menu a:hover {
+      color: var(--green1);
+    }
+    /* Hero content */
+    .hero-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 46px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .hero-col-left {
+      flex: 1 1 340px;
+      min-width: 320px;
+    }
+    .circle-highlight {
+      border: 2.7px solid var(--green1);
+      border-radius: 50%;
+      padding: 32px 0 32px 0;
+      min-width: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+      background: rgba(52,235,119,0.05);
+      box-shadow: 0 0 64px 0 rgba(52,235,119,0.08) inset;
     }
     .hero-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: 3.1rem;
+      font-size: 2.6rem;
       font-weight: 700;
-      color: var(--green-dark);
-      margin-bottom: 14px;
-      line-height: 1.1;
+      color: var(--text-strong);
+      letter-spacing: 1.4px;
+      text-align: center;
+      z-index: 2;
+    }
+    .hero-col-right {
+      flex: 1 1 320px;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .hero-desc {
-      font-size: 1.17rem;
-      max-width: 430px;
-      color: #255b3d;
-      margin-bottom: 30px;
+      font-size: 1.12rem;
+      color: var(--text-main);
+      margin-bottom: 38px;
+      margin-top: 16px;
+      line-height: 1.5;
+      max-width: 400px;
     }
     .hero-buttons {
-      display: flex;
-      gap: 18px;
-      margin-top: 12px;
+      display: flex; gap: 18px;
     }
     .btn-main {
-      background: var(--green-main);
-      color: #fff;
+      background: var(--green1);
+      color: var(--green2);
       border: none;
       border-radius: 50px;
-      padding: 13px 32px;
+      padding: 13px 34px;
       font-family: 'Poppins', sans-serif;
       font-size: 1.06rem;
       font-weight: 600;
       cursor: pointer;
       box-shadow: 0 4px 14px 0 rgba(52,235,119,0.13);
       transition: background 0.22s, color 0.22s;
+      text-decoration: none;
+      outline: none;
+      display: inline-block;
     }
     .btn-main:hover {
-      background: var(--green-dark);
+      background: var(--green4);
       color: #fff;
     }
     .btn-alt {
       background: transparent;
-      color: var(--green-main);
-      border: 2px solid var(--green-main);
+      color: var(--green1);
+      border: 2px solid var(--green1);
       border-radius: 50px;
-      padding: 13px 32px;
+      padding: 13px 34px;
       font-family: 'Poppins', sans-serif;
       font-size: 1.06rem;
       font-weight: 600;
       cursor: pointer;
       transition: background 0.22s, color 0.22s, border-color 0.22s;
+      text-decoration: none;
+      outline: none;
+      display: inline-block;
     }
     .btn-alt:hover {
-      background: var(--green-main);
+      background: var(--green1);
       color: #fff;
-      border-color: var(--green-main);
+      border-color: var(--green1);
     }
     /* Responsive */
-    @media (max-width: 768px) {
-      .hero-container {
-        padding: 36px 10px 48px 10px;
-      }
-      .hero-title {
-        font-size: 2.1rem;
-      }
-      .hero-content {
-        min-height: 320px;
-      }
+    @media (max-width: 900px) {
+      .main-hero-panel { padding: 22px 10px 36px 10px; }
+      .hero-row { flex-direction: column; gap: 22px; align-items: stretch; }
+      .circle-highlight { min-width: unset; padding: 28px 0; }
+      .hero-title { font-size: 2rem; }
+    }
+    @media (max-width: 480px) {
+      .main-hero-panel { border-radius: 12px; }
+      .main-menu { gap: 16px; }
     }
   </style>
 </head>
 <body>
-  <div class="hero-container">
-    <!-- Fondo SVG con motivos de creación de contenido en verde -->
-    <svg class="hero-bg-svg" viewBox="0 0 1100 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Abstract green blobs and shapes -->
-      <ellipse cx="170" cy="110" rx="120" ry="70" fill="#eafef1" fill-opacity="0.60"/>
-      <ellipse cx="950" cy="380" rx="110" ry="60" fill="#eafef1" fill-opacity="0.42"/>
-      <ellipse cx="300" cy="400" rx="80" ry="50" fill="#b2ffd8" fill-opacity="0.34"/>
-      <!-- Icon: Video Camera -->
-      <g>
-        <circle cx="210" cy="320" r="34" fill="#a6f7c6" fill-opacity="0.82"/>
-        <g>
-          <rect x="195" y="306" width="28" height="18" rx="5" fill="#15b95a"/>
-          <polygon points="223,315 236,323 236,309" fill="#15b95a"/>
-        </g>
+  <div class="main-hero-panel">
+    <!-- SVG abstract background shapes -->
+    <svg class="abstract-bg" width="100%" height="100%" viewBox="0 0 980 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="150" cy="100" rx="110" ry="65" fill="#1ec25f" fill-opacity="0.3"/>
+      <ellipse cx="850" cy="360" rx="100" ry="55" fill="#a6f7c6" fill-opacity="0.21"/>
+      <ellipse cx="300" cy="370" rx="65" ry="35" fill="#34eb77" fill-opacity="0.15"/>
+      <ellipse cx="780" cy="80" rx="40" ry="18" fill="#34eb77" fill-opacity="0.13"/>
+      <g opacity="0.17">
+        <circle cx="260" cy="370" r="48" fill="#34eb77"/>
+        <line x1="220" y1="370" x2="300" y2="370" stroke="#fff" stroke-width="2" stroke-dasharray="8,4"/>
       </g>
-      <!-- Icon: Photo Camera -->
-      <g>
-        <circle cx="980" cy="120" r="28" fill="#b2ffd8" fill-opacity="0.62"/>
-        <g>
-          <rect x="965" y="110" width="24" height="14" rx="3" fill="#34eb77"/>
-          <circle cx="977" cy="117" r="4" fill="#15b95a"/>
-        </g>
+      <g opacity="0.11">
+        <ellipse cx="680" cy="110" rx="28" ry="14" fill="#a6f7c6"/>
+        <line x1="652" y1="110" x2="708" y2="110" stroke="#34eb77" stroke-width="2" stroke-dasharray="8,4"/>
       </g>
-      <!-- Icon: Edit pencil -->
-      <g>
-        <circle cx="800" cy="90" r="22" fill="#a6f7c6" fill-opacity="0.68"/>
-        <rect x="792" y="84" width="16" height="5" rx="2" fill="#096b34" transform="rotate(45 800 90)"/>
-      </g>
-      <!-- Icon: Social (chat bubble) -->
-      <g>
-        <circle cx="80" cy="420" r="19" fill="#34eb77" fill-opacity="0.43"/>
-        <rect x="70" y="410" width="16" height="10" rx="3" fill="#15b95a"/>
-        <polygon points="82,420 88,425 85,420" fill="#15b95a"/>
-      </g>
-      <!-- Decorative lines -->
-      <line x1="300" y1="90" x2="400" y2="90" stroke="#15b95a" stroke-width="3" stroke-dasharray="10,6"/>
-      <line x1="800" y1="420" x2="900" y2="410" stroke="#34eb77" stroke-width="3" stroke-dasharray="12,5"/>
-      <ellipse cx="600" cy="240" rx="180" ry="110" fill="#a6f7c6" fill-opacity="0.09"/>
+      <!-- Decorative triangles -->
+      <polygon points="190,200 200,215 180,215" fill="#34eb77" opacity="0.13"/>
+      <polygon points="880,180 890,195 870,195" fill="#a6f7c6" opacity="0.11"/>
+      <!-- Decorative circle border (main) -->
+      <circle cx="310" cy="170" r="110" stroke="#34eb77" stroke-width="3" fill="none" opacity="0.29"/>
     </svg>
 
-    <!-- Contenido principal -->
-    <div class="hero-content">
-      <div class="brand-row">
-        <div class="circle-logo">
-          <i class="fas fa-bolt" style="color: #fff; font-size: 1.2rem;"></i>
-        </div>
+    <!-- Barra de navegación -->
+    <nav class="main-nav">
+      <div class="brand">
+        <span class="brand-circle">
+          <svg width="16" height="16" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#fff"/><circle cx="10" cy="10" r="7" fill="#34eb77"/></svg>
+        </span>
         <span class="brand-name">Sinergia Studio</span>
       </div>
-      <h1 class="hero-title">Creación de Contenido Futurista</h1>
-      <div class="hero-desc">
-        Transformamos ideas en videos, fotos y estrategias <br>
-        para marcas que quieren destacar y conectar con su audiencia en digital.
+      <div class="main-menu">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#porque-elegirnos">¿Por qué elegirnos?</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
       </div>
-      <div class="hero-buttons">
-        <a href="#servicios" class="btn-main">Ver Servicios</a>
-        <a href="#contacto" class="btn-alt">Contáctanos</a>
+    </nav>
+
+    <!-- Hero principal -->
+    <div class="hero-row">
+      <div class="hero-col-left">
+        <div class="circle-highlight">
+          <span class="hero-title">Transformamos Ideas<br>en Estrategias Digitales</span>
+        </div>
+      </div>
+      <div class="hero-col-right">
+        <div class="hero-desc">
+          En <strong>Sinergia Studio</strong> creamos contenido, marcas y experiencias digitales que conectan de verdad con tu público. Estrategias a medida, resultados tangibles, y conexión auténtica.<br><br>
+          <em>¿Listo para impulsar tu presencia digital?</em>
+        </div>
+        <div class="hero-buttons">
+          <a href="#servicios" class="btn-main">Ver Servicios</a>
+          <a href="#contacto" class="btn-alt">Contáctanos</a>
+        </div>
       </div>
     </div>
   </div>
