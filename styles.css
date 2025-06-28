@@ -1,0 +1,142 @@
+/* Variables de colores */
+:root {
+  --verde-claro: #9fc39d;
+  --verde-oscuro: #4a8057;
+  --gris-claro: #f4f4f4;
+  --negro: #333333;
+  --blanco: #ffffff;
+}
+
+/* Estilos globales */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--negro);
+}
+
+header {
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  width: 120px;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--verde-claro);
+}
+
+.hero {
+  margin-top: 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  animation: fadeIn 1s ease;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--verde-claro);
+  color: var(--blanco);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--verde-oscuro);
+}
+
+/* Sección */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease;
+}
+
+/* Animaciones */
+[data-animate="fade-in"] {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+
+[data-animate="slide-in-left"] {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 1s ease forwards;
+}
+
+[data-animate="slide-in-right"] {
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slideInRight 1s ease forwards;
+}
+
+[data-animate="zoom-in"] {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 1s ease forwards;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
